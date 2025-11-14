@@ -1,9 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { BellIcon, XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
-import { logoutUser } from "./userSlice";
+import logo from '/assets/urbantechs.svg';
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   const location = useLocation();
@@ -77,7 +75,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
           {/* Header */}
           <div className="flex items-center justify-center p-5">
             <Link to="/dashboard">
-              <img src="../assets/urbantechs.svg" alt="Logo" width={150} />
+              <img src={logo} alt="Logo" width={150}/>
             </Link>
             <button
               onClick={() => setSidebarOpen(false)}
