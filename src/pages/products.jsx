@@ -174,7 +174,7 @@ const Products = () => {
                 <td className="px-6 py-3">
                   {product.product_images?.length > 0 && (
                     <img
-                      src={`http://localhost:3000${product.product_images[0]}`}
+                      src={`${API}${product.product_images[0]}`}
                       alt={product.name}
                       className="w-10 h-10 object-contain"
                     />

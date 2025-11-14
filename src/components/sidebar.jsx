@@ -77,7 +77,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
           {/* Header */}
           <div className="flex items-center justify-center p-5">
             <Link to="/dashboard">
-              <img src="./assets/urbantechs.svg" alt="Logo" width={150} />
+              <img src="../assets/urbantechs.svg" alt="Logo" width={150} />
             </Link>
             <button
               onClick={() => setSidebarOpen(false)}
