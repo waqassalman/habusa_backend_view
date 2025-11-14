@@ -2,7 +2,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { restoreSession } from './components/userSlice';
-import { Router, Routes, Route, Navigate, HashRouter } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
+
 import LoginPage from './pages/LoginPage';
 import Dashboard from './pages/Dashboard';
 import Products from './pages/Products';
@@ -18,16 +19,15 @@ import UpdateOrder from './pages/Orders/updateOrder';
 function App() {
   const dispatch = useDispatch();
   const { isAuthenticated } = useSelector((state) => state.user);
-  
+
   useEffect(() => {
     dispatch(restoreSession());
   }, [dispatch]);
 
   return (
     <HashRouter>
-    <Router>
       <Routes>
-      <Route
+        <Route
           path="/"
           element={isAuthenticated ? <Navigate to="/dashboard" /> : <LoginPage />}
         />
@@ -59,7 +59,7 @@ function App() {
           path="/products/update-product/:productId"
           element={isAuthenticated ? <UpdateProduct /> : <Navigate to="/" />}
         />
-         <Route
+        <Route
           path="/orders/view-order/:orderId"
           element={isAuthenticated ? <ViewOrder /> : <Navigate to="/" />}
         />
@@ -68,10 +68,9 @@ function App() {
           element={isAuthenticated ? <UpdateOrder /> : <Navigate to="/" />}
         />
       </Routes>
+
       <Toast />
-    </Router>
     </HashRouter>
-    
   );
 }
 
