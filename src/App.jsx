@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { restoreSession } from './components/userSlice';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, HashRouter } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import Dashboard from './pages/Dashboard';
 import Products from './pages/Products';
@@ -24,7 +24,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    
+    <HashRouter>
     <Router>
       <Routes>
       <Route
@@ -70,6 +70,7 @@ function App() {
       </Routes>
       <Toast />
     </Router>
+    </HashRouter>
     
   );
 }
