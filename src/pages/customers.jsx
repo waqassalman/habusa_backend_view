@@ -3,6 +3,7 @@ import PageWrapper from '../layouts/PageWrapper';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { showToast } from '../components/toastSlice';
+import { API } from "../config/api";
 
 const Customers = () => {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const Customers = () => {
   // 🟢 Fetch orders from backend
   const fetchCustomers = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/api/users?search=${search}&sort=${sort}&page=${page}&limit=10`, {
+      const response = await fetch(`${API}/api/users?search=${search}&sort=${sort}&page=${page}&limit=10`, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
       });

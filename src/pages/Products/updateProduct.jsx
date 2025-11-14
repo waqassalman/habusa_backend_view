@@ -218,7 +218,7 @@ const UpdateProduct = () => {
                         {previews.map((src, i) => (
                             <div key={i} className="relative group">
                                 <img
-                                    src={src.startsWith("blob:") ? src : `http://localhost:3000${src}`}
+                                    src={src.startsWith("blob:") ? src : `${API}${src}`}
                                     alt={`preview-${i}`}
                                     className="w-30 h-30 object-contain rounded-xl shadow-sm bg-gray-100 p-2"
                                 />

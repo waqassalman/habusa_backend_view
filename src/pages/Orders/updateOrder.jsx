@@ -3,6 +3,7 @@ import PageWrapper from '../../layouts/PageWrapper';
 import { useDispatch } from "react-redux";
 import { showToast } from "../../components/toastSlice";
 import { useParams } from 'react-router-dom';
+import { API } from "../../config/api";
 
 const UpdateOrder = () => {
     const dispatch = useDispatch();
@@ -44,7 +45,7 @@ const UpdateOrder = () => {
 
         try {
             // ✅ FIX: missing slash between "products" and ID
-            const res = await fetch(`http://localhost:3000/api/orders/${orderId}`, {
+            const res = await fetch(`${API}/api/orders/${orderId}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ status, total_amount, order_date, order_location }),
