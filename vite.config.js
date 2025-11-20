@@ -9,8 +9,16 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  assetsInclude: ['**/*.svg'],
   optimizeDeps: {
     include: ['jwt-decode']
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: "assets/[name][extname]"
+      }
+    }
   }
   
 })
