@@ -1,5 +1,6 @@
 {
-    "platform": {
-      "nodeVersion": "20.19.0"
-    }
+    "routes": [
+      { "route": "/*", "serve": "/index.html", "statusCode": 200 }
+    ]
   }
+  
