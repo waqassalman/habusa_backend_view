@@ -4,12 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { restoreSession } from './components/userSlice';
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 
-import LoginPage from './pages/LoginPage';
-import Dashboard from './pages/Dashboard';
-import Products from './pages/Products';
-import Customers from './pages/Customers';
-import Orders from './pages/Orders';
-import Payments from './pages/Payments';
+import LoginPage from './pages/loginPage';
+import Dashboard from './pages/dashboard';
+import Products from './pages/products';
+import Customers from './pages/customers';
+import Orders from './pages/orders';
+import Payments from './pages/payments';
 import Toast from './layouts/Toast';
 import AddProduct from './pages/Products/addProduct';
 import UpdateProduct from './pages/Products/updateProduct';
