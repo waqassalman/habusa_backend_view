@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser, logoutUser } from '../components/userSlice';
-import logo from '../assets/urbantechs.svg';
+// import logo from '../assets/urbantechs.svg';
 
 const LoginPage = () => {
   const [form, setForm] = useState({ email: '', password: '' });
@@ -26,7 +26,7 @@ const LoginPage = () => {
     //   ) : (
     <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-      <img src={logo} alt="Logo" width={200} className='mx-auto'/>
+      {/* <img src={logo} alt="Logo" width={200} className='mx-auto'/> */}
         <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight">Sign in to your account</h2>
       </div>
 
