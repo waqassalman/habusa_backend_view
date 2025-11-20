@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser, logoutUser } from '../components/userSlice';
-import logo from '/assets/urbantechs.svg';
+import logo from '../assets/urbantechs.svg';
 
 const LoginPage = () => {
   const [form, setForm] = useState({ email: '', password: '' });
