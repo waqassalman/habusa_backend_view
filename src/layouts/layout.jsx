@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Sidebar from "../components/Sidebar";
-import Navbar from "../components/Navbar";
+import Sidebar from "../components/sidebar";
+import Navbar from "../components/navbar";
 import { useLocation, Link } from "react-router-dom";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
